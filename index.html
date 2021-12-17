@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--    HW Assignment 5
+        File: index.html
+        Joshua Sullivan, Joshua_Sullivan1@student.uml.edu
+        12/10/2021   
+        This webpage generates a game of scrabble. The user can drag and drop pieces from the tile rack onto the board, 
+        refill the rack by pressing "new word" or restart the game.
+-->
+
+<html lang="en">
+    <head>
+        <title></title>
+        <link href="css/style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="">
+        <meta name="author" content="Joshua Sullivan">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script src="js/scrabble.js"></script>
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <header>
+            </header>
+            
+            <h1>Hw5: Scrabble</h1>
+
+            <div id="content">
+                <div id="criteria">Create one word with no gap between letters. The word must contain at least 2 letters.</div>
+
+                <!--Displays Score information and remaining tiles. Updates when "Next Word" or "Restart" is pressed-->
+                <div id="info">Score: <div id="score"></div></div>
+                <div id="info">High Score: <div id="high_score"></div></div>
+                <div id="info">Tiles Remaining: <div id="remaining"></div></div>
+
+
+                <!--The row of spaces where tiles are to be placed-->
+                <div id="row">
+                    <div  id="special1" class="special" order="0"><img src="graphics_data/special_space.png"></div
+                    ><div id="basic1" class="basic" order="1"><img src="graphics_data/basic_space.png"></div
+                    ><div id="basic2" class="basic" order="2"><img src="graphics_data/basic_space.png"></div
+                    ><div id="basic3" class="basic" order="3"><img src="graphics_data/basic_space.png"></div
+                    ><div id="special2" class="special" order="4"><img src="graphics_data/special_space.png"></div
+                    ><div id="basic4" class="basic" order="5"><img src="graphics_data/basic_space.png"></div
+                    ><div id="basic5" class="basic" order="6"><img src="graphics_data/basic_space.png"></div>
+                </div>
+                <div id="rack"> </div>
+            </div>
+            <br>
+
+            <!--Refills the rack with new tiles-->
+            <button onclick="next_word()">Next Word</button>
+
+            <!--Restarts the game. Only high score carries between games-->
+            <button onclick="restart()">Restart</button>
+
+        </div>
+    </body>
+
+</html>
